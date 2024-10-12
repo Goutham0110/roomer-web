@@ -65,7 +65,6 @@ export default function ChatBoardPage() {
         });
 
         socket.on("population_change", (population) => {
-            console.log("population", population);
             setRoomPopulation(population);
         })
 
