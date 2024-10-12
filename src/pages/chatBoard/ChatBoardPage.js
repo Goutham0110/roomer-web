@@ -69,7 +69,7 @@ export default function ChatBoardPage() {
         })
 
         return () => socket.offAny();
-    }, []);
+    }, [socket]);
 
     return (
         <div className={styles.ChatBoard}>
