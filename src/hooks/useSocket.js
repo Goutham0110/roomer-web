@@ -1,8 +1,9 @@
 import { io } from "socket.io-client";
+import configs from "../config/config";
 
 
 // TODO: Receive message from server
-let socket = io("http://192.168.29.220:8000/");
+let socket = io(configs.SERVER_URL);
 let isConnecting = false;
 
 export default function useSocket() {
@@ -10,6 +11,6 @@ export default function useSocket() {
         return socket;
     }
     isConnecting = true;
-    socket = io("http://192.168.29.220:8000/");
+    socket = io(configs.SERVER_URL);
     return socket;
 }
