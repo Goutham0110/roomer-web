@@ -1,0 +1,46 @@
+.ChatBoard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 15px;
+    height: 95vh;
+}
+
+.Chat {
+    padding: 0 20px;
+    width: 50vw;
+}
+
+.MessageBox {
+    padding: 15px;
+    max-height: 75vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse
+}
+
+.Message {
+    display: flex;
+    border-radius: 12px;
+    min-width: 50px;
+    justify-content: center;
+    padding: 0 15px;
+    margin: 3px 0;
+    line-height: 1vh;
+}
+
+@media screen and (max-width: 600px) {
+    .ChatBoard {
+        height: 88vh;
+    }
+
+    .Chat {
+        padding: 0 0;
+        width: 95vw;
+    }
+
+    .MessageBox {
+        max-height: 70vh;
+    }
+}
